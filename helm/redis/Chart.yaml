@@ -1,0 +1,9 @@
+---
+apiVersion: v2
+name: redis
+version: 19.6.1
+appVersion: 7.2.5
+dependencies:
+  - name: redis
+    version: 19.6.1
+    repository: https://charts.bitnami.com/bitnami
