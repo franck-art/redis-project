@@ -22,8 +22,10 @@ async def get_users(user_id):
 # Get all users from redis with key match "users:*"
 @app.get("/all_users")
 async def get_all_users():
+    keys = []
     for key in r.scan_iter("users:*"):
-        return key
+        keys.append(key)
+    return keys
 
 # Query parameters   
 # Add users to redis
